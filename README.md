@@ -1,2 +1,2 @@
-# praticalgoritmo
-teste do nivel atual em algoritmo
+# Algoritmo_Estrutura_Dados
+Repositório destinado a disciplina de Algoritmo e Estrutura de Dados I
