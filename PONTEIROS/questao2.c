@@ -2,7 +2,7 @@
 int main(void) {
 int x, *p;
 x = 100;
-p = &x;
+p = x; //p = &x
 printf("Valor de p = %p\tValor de *p = %d", p, *p);
 }
 
