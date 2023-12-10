@@ -18,24 +18,24 @@ int main() {
         scanf(" %d", &opiniao[i]);
     }
 
-    int mulheresgostaram = 0;
+    int mulheres_gostaram = 0;
 for (int i = 0; i < entrevistados; i++) {
     if (sexo[i] == 2 && opiniao[i] == 1) {
-        mulheresgostaram++;
+        mulheres_gostaram++;
     }
 }
-float porcentagemulheres = (float)mulheresgostaram / entrevistados * 100;
+float porcentagem_mulheres = (float)mulheres_gostaram / entrevistados * 100;
 
-int homensnaogostaram = 0;
+int homens_nao_gostaram = 0;
 for (int i = 0; i < entrevistados; i++) {
     if (sexo[i] == 1 && opiniao[i] == 2) {
-        homensnaogostaram++;
+        homens_nao_gostaram++;
     }
 }
-float porcentagemhomens = (float)homensnaogostaram / entrevistados * 100;
+float porcentagem_homens = (float)homens_nao_gostaram / entrevistados * 100;
 
-    printf("\nPorcentagem de mulheres que gostaram do produto: %.2f%%\n", porcentagemulheres);
-    printf("Porcentagem de homens que nao gostaram do produto: %.2f%%\n", porcentagemhomens);
+    printf("\nPorcentagem de mulheres que gostaram do produto: %.2f%%\n", porcentagem_mulheres);
+    printf("Porcentagem de homens que nao gostaram do produto: %.2f%%\n", porcentagem_homens);
 
     free(sexo);
     free(opiniao);
