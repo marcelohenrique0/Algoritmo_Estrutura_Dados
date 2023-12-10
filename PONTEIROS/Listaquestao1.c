@@ -1,4 +1,4 @@
-int x, y, *p;
+ientrevistadost x, y, *p;
 y = 0;
 p = &y;
 x = *p;

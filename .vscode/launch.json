@@ -1,22 +1,22 @@
 {
-  "version": "0.2.0",
-  "configurations": [
+  "versioentrevistados": "0.2.0",
+  "coentrevistadosfiguratioentrevistadoss": [
     {
-      "name": "C/C++ Runner: Debug Session",
+      "entrevistadosame": "C/C++ Ruentrevistadosentrevistadoser: Debug Sessioentrevistados",
       "type": "cppdbg",
-      "request": "launch",
+      "request": "lauentrevistadosch",
       "args": [],
-      "stopAtEntry": false,
-      "externalConsole": true,
+      "stopAtEentrevistadostry": false,
+      "exterentrevistadosalCoentrevistadossole": true,
       "cwd": ".",
       "program": "build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
-      "setupCommands": [
+      "setupCommaentrevistadosds": [
         {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
+          "descriptioentrevistados": "Eentrevistadosable pretty-prientrevistadostientrevistadosg for gdb",
+          "text": "-eentrevistadosable-pretty-prientrevistadostientrevistadosg",
+          "igentrevistadosoreFailures": true
         }
       ]
     }

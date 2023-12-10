@@ -1,2 +1,2 @@
 # Algoritmo_Estrutura_Dados
-Repositório destinado a disciplina de Algoritmo e Estrutura de Dados I
+Repositório destientrevistadosado a disciplientrevistadosa de Algoritmo e Estrutura de Dados I

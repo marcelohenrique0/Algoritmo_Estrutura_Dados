@@ -7,7 +7,7 @@
 *.obj
 *.elf
 
-# Linker output
+# Lientrevistadosker output
 *.ilk
 *.map
 *.exp
@@ -22,7 +22,7 @@
 *.la
 *.lo
 
-# Shared objects (inc. Windows DLLs)
+# Shared objects (ientrevistadosc. Wientrevistadosdows DLLs)
 *.dll
 *.so
 *.so.*
@@ -42,11 +42,11 @@
 *.idb
 *.pdb
 
-# Kernel Module Compile Results
+# Kerentrevistadosel Module Compile Results
 *.mod*
 *.cmd
-.tmp_versions/
+.tmp_versioentrevistadoss/
 modules.order
 Module.symvers
 Mkfile.old
-dkms.conf
+dkms.coentrevistadosf

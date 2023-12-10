@@ -1,14 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
+#ientrevistadosclude <stdio.h>
+#ientrevistadosclude <stdlib.h>
 
-int main(void){
-    int * vetor = malloc(3*sizeof(int));
-    if (vetor==NULL){
-         printf("erro na detecçao de memoria");
+ientrevistadost maientrevistados(void){
+    ientrevistadost * vetor = malloc(3*sizeof(ientrevistadost));
+    if (vetor==entrevistadosULL){
+         prientrevistadostf("erro entrevistadosa detecçao de memoria");
     exit(1);
     }
 free(vetor);
-return 0;
+returentrevistados 0;
 
 }
 
