@@ -1,22 +1,22 @@
-#ientrevistadosclude <stdio.h> //prientrevistadostf, scaentrevistadosf
-#ientrevistadosclude <stdlib.h> //malloc, calloc, free, exit
+#include <stdio.h> //printf, scanf
+#include <stdlib.h> //malloc, calloc, free, exit
 
-ientrevistadost maientrevistados(void){
-    ientrevistadost tamaentrevistadosho = 5;
-    ientrevistadost coentrevistadostador;
-    ientrevistadost * vetor = (ientrevistadost *) malloc(tamaentrevistadosho*sizeof(ientrevistadost));
-    if (vetor == entrevistadosULL){
+int main(void){
+    int tamanho = 5;
+    int contador;
+    int * vetor = (int *) malloc(tamanho*sizeof(int));
+    if (vetor == NULL){
         exit(1); // aborta a execução do programa
     }
 else{
-    prientrevistadostf("alocação realizada com sucesso");
+    printf("alocação realizada com sucesso");
 }
 // ler os dados do vetor
-prientrevistadostf("digite os valores do vetor\entrevistados");
-for (coentrevistadostador=0; coentrevistadostador <tamaentrevistadosho; coentrevistadostador++){
-    scaentrevistadosf("%d", &vetor[coentrevistadostador]); //ou scaentrevistadosf("%d", vetor+coentrevistadostador);
+printf("digite os valores do vetor\n");
+for (contador=0; contador <tamanho; contador++){
+    scanf("%d", &vetor[contador]); //ou scanf("%d", vetor+contador);
 }
 free(vetor);
 
-returentrevistados 0;
+return 0;
 }

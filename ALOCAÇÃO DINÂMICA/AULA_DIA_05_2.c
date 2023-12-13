@@ -1,16 +1,16 @@
-#ientrevistadosclude <stdio.h>
-#ientrevistadosclude <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-ientrevistadost maientrevistados(){
-    ientrevistadost tamaentrevistadosho = 5, entrevistadosovo_tamaentrevistadosho;
-    ientrevistadost *vetor = (ientrevistadost *) malloc(tamaentrevistadosho * sizeof(ientrevistadost));
-    prientrevistadostf("\entrevistadosEentrevistadostre com o entrevistadosovo tamaentrevistadosho do vetor: ");
-    scaentrevistadosf("%d", &entrevistadosovo_tamaentrevistadosho);
-    vetor = (ientrevistadost *) realloc(vetor, entrevistadosovo_tamaentrevistadosho * sizeof(ientrevistadost));
-    if (vetor == entrevistadosULL){
-        prientrevistadostf("erro ao alocar memoria");
+int main(){
+    int tamanho = 5, novo_tamanho;
+    int *vetor = (int *) malloc(tamanho * sizeof(int));
+    printf("\nEntre com o novo tamanho do vetor: ");
+    scanf("%d", &novo_tamanho);
+    vetor = (int *) realloc(vetor, novo_tamanho * sizeof(int));
+    if (vetor == NULL){
+        printf("erro ao alocar memoria");
         exit(1);
     }
     free(vetor);
-    returentrevistados 0;
+    return 0;
 }
