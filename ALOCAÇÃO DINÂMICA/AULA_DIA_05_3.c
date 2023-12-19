@@ -1,14 +1,14 @@
-#ientrevistadosclude <stdio.h>
-#ientrevistadosclude <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-ientrevistadost maientrevistados(void){
-    ientrevistadost * entrevistadosome = (ientrevistadost*) malloc(50*sizeof(ientrevistadost));
-    if(entrevistadosome == entrevistadosULL){
+int main(void){
+    char * nome = (char*) malloc(50*sizeof(char));
+    if(nome == NULL){
         exit(1);
     }
-prientrevistadostf("Digite seu entrevistadosome:\entrevistados");
-scaentrevistadosf("%[^\entrevistados]", entrevistadosome);
-prientrevistadostf("seu entrevistadosome é: %s ", entrevistadosome);
-free(entrevistadosome);
-  returentrevistados 0;
+printf("Digite seu nome:\n");
+scanf("%[^\n]", nome);
+printf("seu nome é: %s ", nome);
+free(nome);
+  return 0;
 }

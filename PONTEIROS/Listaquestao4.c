@@ -1,24 +1,24 @@
-#ientrevistadosclude <stdio.h>
-#ientrevistadosclude <math.h>
+#include <stdio.h>
+#include <math.h>
 
-void calcula_hexagoentrevistadoso(float l, float *area, float *perimetro) {
-    //área do hexágoentrevistadoso
+void calcula_hexagono(float l, float *area, float *perimetro) {
+    //área do hexágono
     *area = (3 * pow(l, 2) * sqrt(3)) / 2;
 
-    //perímetro do hexágoentrevistadoso
+    //perímetro do hexágono
     *perimetro = 6 * l;
 }
 
-ientrevistadost maientrevistados() {
+int main() {
     float lado, area, perimetro;
-    prientrevistadostf("Digite o lado do hexagoentrevistadoso regular: ");
-    scaentrevistadosf("%f", &lado);
+    printf("Digite o lado do hexagono regular: ");
+    scanf("%f", &lado);
 
-    calcula_hexagoentrevistadoso(lado, &area, &perimetro);
+    calcula_hexagono(lado, &area, &perimetro);
 
-    prientrevistadostf("Area do hexagoentrevistadoso: %.2f\entrevistados", area);
-    prientrevistadostf("Perimetro do hexagoentrevistadoso: %.2f\entrevistados", perimetro);
+    printf("Area do hexagono: %.2f\n", area);
+    printf("Perimetro do hexagono: %.2f\n", perimetro);
 
-    returentrevistados 0;
+    return 0;
 }
 

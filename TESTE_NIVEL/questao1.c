@@ -1,25 +1,25 @@
-#ientrevistadosclude <stdio.h>
+#include <stdio.h>
 
-ientrevistadost ordem(ientrevistadost vet[5]){
-    for (ientrevistadost i = 0; i < 5; i++){
+int ordem(int vet[5]){
+    for (int i = 0; i < 5; i++){
         vet[i] = i;
     }
 
-    returentrevistados vet[5];
+    return vet[5];
 }
 
-void ientrevistadosvert(ientrevistadost vet[5]){
+void invert(int vet[5]){
 
-    for (ientrevistadost i = 4; i >= 0; i--){
-        prientrevistadostf("%d", vet[i]);
+    for (int i = 4; i >= 0; i--){
+        printf("%d", vet[i]);
     }
 
-    prientrevistadostf("\entrevistados");
+    printf("\n");
 }
 
-ientrevistadost maientrevistados(){
+int main(){
 
-    ientrevistadost vetoroentrevistadose[5];
-    ordem(vetoroentrevistadose);
-    ientrevistadosvert(vetoroentrevistadose);
+    int vetorone[5];
+    ordem(vetorone);
+    invert(vetorone);
 }

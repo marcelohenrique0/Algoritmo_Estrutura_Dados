@@ -1,31 +1,31 @@
-#ientrevistadosclude <stdio.h>
+#include <stdio.h>
 
-ientrevistadost soma(ientrevistadost entrevistadosumber1, ientrevistadost entrevistadosumber2) {
-    if (entrevistadosumber1 > entrevistadosumber2) {
-        ientrevistadost o = entrevistadosumber1;
-        entrevistadosumber1 = entrevistadosumber2;
-        entrevistadosumber2 = o;
+int soma(int number1, int number2) {
+    if (number1 > number2) {
+        int o = number1;
+        number1 = number2;
+        number2 = o;
     }
 
-    ientrevistadost soma = 0;
+    int soma = 0;
 
-    for (ientrevistadost i = entrevistadosumber1 + 1; i < entrevistadosumber2; i++) {
+    for (int i = number1 + 1; i < number2; i++) {
         soma += i;
     }
 
-    returentrevistados soma;
+    return soma;
 }
 
-ientrevistadost maientrevistados() {
-    ientrevistadost entrevistadosumero1, entrevistadosumero2;
-    prientrevistadostf("Qual o primeiro entrevistadosumero?: ");
-    scaentrevistadosf("%d", &entrevistadosumero1);
+int main() {
+    int numero1, numero2;
+    printf("Qual o primeiro numero?: ");
+    scanf("%d", &numero1);
 
-    prientrevistadostf("Qual o seguentrevistadosdo entrevistadosumero?: ");
-    scaentrevistadosf("%d", &entrevistadosumero2);
+    printf("Qual o segundo numero?: ");
+    scanf("%d", &numero2);
 
-    ientrevistadost resultado = soma(entrevistadosumero1, entrevistadosumero2);
-    prientrevistadostf("A soma dos entrevistadosumeros ientrevistadosteiros eentrevistadostre %d e %d é: %d\entrevistados", entrevistadosumero1, entrevistadosumero2, resultado);
+    int resultado = soma(numero1, numero2);
+    printf("A soma dos numeros inteiros entre %d e %d é: %d\n", numero1, numero2, resultado);
 
-    returentrevistados 0;
+    return 0;
 }

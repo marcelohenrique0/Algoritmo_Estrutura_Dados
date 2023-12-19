@@ -1,8 +1,8 @@
-#ientrevistadosclude <stdio.h>
+#include <stdio.h>
 
-ientrevistadost maientrevistados (){
+int main (){
 
-ientrevistadost i ;
+int i ;
 for ( i =1 ; i <= 100 ; i *=100) {
 
 if ( i ==30 ) 
@@ -11,15 +11,15 @@ break ;
 }
 
 else {
-prientrevistadostf ("%2d\entrevistados" ,2* i ) ;
+printf ("%2d\n" ,2* i ) ;
 }
 
 }
 
-prientrevistadostf ("Fim do laco !\entrevistados") ;
-returentrevistados 0;
+printf ("Fim do laco !\n") ;
+return 0;
 }
 
 //RESPOSTAS:
-// O programa faz um loop de i(1) multiplicado por 100, seentrevistadosdo um loop de uentrevistadosica rodada apeentrevistadosas.
+// O programa faz um loop de i(1) multiplicado por 100, sendo um loop de unica rodada apenas.
 // Logo, o programa imprime 100*2 = 200 e fim do laço de repetiçao!

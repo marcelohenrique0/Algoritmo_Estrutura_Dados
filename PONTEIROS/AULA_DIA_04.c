@@ -1,62 +1,67 @@
-#ientrevistadosclude <stdio.h>
+#include <stdio.h>
 
-ientrevistadost soma(ientrevistadost a, ientrevistadost b){
-    returentrevistados a + b;
+int soma(int a, int b) {
+    return a + b;
 }
 
-ientrevistadost subtracao(ientrevistadost a, ientrevistadost b){
-    returentrevistados a - b;
+int subtracao(int a, int b) {
+    return a - b;
 }
 
-ientrevistadost mutiplicao(ientrevistadost a, ientrevistadost b){
-    returentrevistados a * b;
+int multiplicacao(int a, int b) {
+    return a * b;
 }
 
-ientrevistadost divisao(ientrevistadost a, ientrevistadost b){
-    returentrevistados a / b;
-}
-
-ientrevistadost calcula(ientrevistadost x, ientrevistadost y, ientrevistadost (*operacao)(ientrevistadost, ientrevistadost)){
-    returentrevistados (*operacao)(x, y);
-}
-
-
-ientrevistadost maientrevistados(void){
-    ientrevistadost escolha, resultado, entrevistadosumero1, entrevistadosumero2;
-    prientrevistadostf("1-soma\entrevistados"
-           "2-subtracao\entrevistados"
-           "3-multiplicacao\entrevistados"
-           "4-divisao\entrevistados");
-    prientrevistadostf("Escolha a operacao a ser realizada:");
-    scaentrevistadosf("%d", &escolha);
-
-    prientrevistadostf("primeiro entrevistadosumero: ");
-    scaentrevistadosf("%d", &entrevistadosumero1);
-
-    prientrevistadostf("seguentrevistadosdo entrevistadosumero: ");
-    scaentrevistadosf("%d", &entrevistadosumero2);
-
-    switch (escolha)
-    {
-    case 1:
-        resultado = calcula(entrevistadosumero1, entrevistadosumero2, soma);
-        break;
-    
-    case 2:
-        resultado = calcula(entrevistadosumero1,entrevistadosumero2,subtracao);
-        break;
-    
-    case 3:
-        resultado = calcula(entrevistadosumero1,entrevistadosumero2,mutiplicao);
-        break;
-    
-    case 4:
-        resultado = calcula(entrevistadosumero1,entrevistadosumero2,divisao);
-        break;
-    default:
-        prientrevistadostf("operacao mal sucedida");
-        break;
+int divisao(int a, int b) {
+    if (b != 0) {
+        return a / b;
+    } else {
+        printf("Erro: divisão por zero\n");
+        return 0;
     }
-    prientrevistadostf("Resultado: %d", resultado);
-    returentrevistados 0;
+}
+
+int calcula(int x, int y, int (*operacao)(int, int)) {
+    return (*operacao)(x, y);
+}
+
+int main(void) {
+    int escolha, resultado, numero1, numero2;
+
+    printf("1-soma\n"
+           "2-subtracao\n"
+           "3-multiplicacao\n"
+           "4-divisao\n");
+    printf("Escolha a operacao a ser realizada: ");
+    scanf("%d", &escolha);
+
+    printf("Primeiro numero: ");
+    scanf("%d", &numero1);
+
+    printf("Segundo numero: ");
+    scanf("%d", &numero2);
+
+    switch (escolha) {
+        case 1:
+            resultado = calcula(numero1, numero2, soma);
+            break;
+        
+        case 2:
+            resultado = calcula(numero1, numero2, subtracao);
+            break;
+        
+        case 3:
+            resultado = calcula(numero1, numero2, multiplicacao);
+            break;
+        
+        case 4:
+            resultado = calcula(numero1, numero2, divisao);
+            break;
+        
+        default:
+            printf("Operacao mal sucedida\n");
+            return 1; // Retorna um código de erro
+    }
+    printf("Resultado: %d\n", resultado);
+    return 0;
 }
