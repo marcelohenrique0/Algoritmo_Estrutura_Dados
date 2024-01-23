@@ -3,7 +3,7 @@
 
 int main (void){
     typedef enum genero{
-        MASCULINO = 0,
+        MASCULINO,
         FEMININO
     }Genero;
 
