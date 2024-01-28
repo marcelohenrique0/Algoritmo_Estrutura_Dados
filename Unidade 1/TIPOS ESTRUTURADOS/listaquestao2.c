@@ -14,68 +14,67 @@ typedef struct {
 
 void inicializa_alunos(Aluno** alunos, int n) {
     for (int i = 0; i < n; i++) {
-        alunos[i] = NULL;
-    }
+    alunos[i] = NULL;
+}
 }
 
 void matricula(int n, Aluno** alunos) {
     for (int i = 0; i < n; i++) {
-        if (alunos[i] == NULL) {
-            alunos[i] = (Aluno*)malloc(sizeof(Aluno));
+    if (alunos[i] == NULL) {
+    alunos[i] = (Aluno*)malloc(sizeof(Aluno));
 
-            printf("Digite a matrícula: ");
-            scanf("%d", &(alunos[i]->matricula));
+    printf("Digite a matrícula: ");
+    scanf("%d", &(alunos[i]->matricula));
 
-            printf("Digite o nome: ");
-            scanf("%s", alunos[i]->nome);
+    printf("Digite o nome: ");
+    canf("%s", alunos[i]->nome);
 
-            printf("Digite a turma: ");
-            scanf(" %c", &(alunos[i]->turma));
+    printf("Digite a turma: ");
+    scanf(" %c", &(alunos[i]->turma));
 
-            return;
-        }
-    }
+    return; }
+}
     printf("Não há vagas disponíveis.\n");
 }
 
 void lanca_notas(int n, Aluno** alunos) {
     for (int i = 0; i < n; i++) {
-        if (alunos[i] != NULL) {
-            for (int j = 0; j < 3; j++) {
-                printf("Digite a nota %d do aluno %d: ", j + 1, alunos[i]->matricula);
-                scanf("%f", &(alunos[i]->notas[j]));
-            }
+    if (alunos[i] != NULL) {
+    for (int j = 0; j < 3; j++) {
+    printf("Digite a nota %d do aluno %d: ", j + 1, alunos[i]->matricula);
+    scanf("%f", &(alunos[i]->notas[j]));
+}
 
-            alunos[i]->media = (alunos[i]->notas[0] + alunos[i]->notas[1] + alunos[i]->notas[2]) / 3.0;
-        }
-    }
+    alunos[i]->media = (alunos[i]->notas[0] + alunos[i]->notas[1] + alunos[i]->notas[2]) / 3.0;
+}
+}
 }
 
 void imprime_tudo(int n, Aluno** alunos) {
     for (int i = 0; i < n; i++) {
-        if (alunos[i] != NULL) {
-            printf("Matrícula: %d, Nome: %s, Turma: %c, Média: %.2f\n",
-                   alunos[i]->matricula, alunos[i]->nome, alunos[i]->turma, alunos[i]->media);
-        }
-    }
+    if (alunos[i] != NULL) {
+    printf("Matrícula: %d, Nome: %s, Turma: %c, Média: %.2f\n",
+    alunos[i]->matricula, alunos[i]->nome, alunos[i]->turma, alunos[i]->media);
+}
+}
 }
 
 void imprime_turma(int n, Aluno** alunos, char turma) {
     for (int i = 0; i < n; i++) {
-        if (alunos[i] != NULL && alunos[i]->turma == turma) {
-            printf("Matrícula: %d, Nome: %s, Turma: %c, Média: %.2f\n",
-                   alunos[i]->matricula, alunos[i]->nome, alunos[i]->turma, alunos[i]->media);
-        }
-    }
+    if (alunos[i] != NULL && alunos[i]->turma == turma) {
+    printf("Matrícula: %d, Nome: %s, Turma: %c, Média: %.2f\n",
+    alunos[i]->matricula, alunos[i]->nome, alunos[i]->turma, alunos[i]->media);
+}
+}
 }
 
 void imprime_turma_aprovados(int n, Aluno** alunos, char turma) {
     for (int i = 0; i < n; i++) {
-        if (alunos[i] != NULL && alunos[i]->turma == turma && alunos[i]->media >= 7.0) {
-            printf("Matrícula: %d, Nome: %s, Turma: %c, Média: %.2f\n",
-                   alunos[i]->matricula, alunos[i]->nome, alunos[i]->turma, alunos[i]->media);
-        }
-    }
+    if (alunos[i] != NULL && alunos[i]->turma == turma && alunos[i]->media >= 7.0) {
+    printf("Matrícula: %d, Nome: %s, Turma: %c, Média: %.2f\n",
+    alunos[i]->matricula, alunos[i]->nome, alunos[i]->turma, alunos[i]->media);
+}
+}
 }
 
 int main() {
@@ -121,13 +120,13 @@ int main() {
                 break;
             default:
                 printf("Opção inválida. Tente novamente.\n");
-        }
+ }
 
-    } while (opcao != 0);
+} while (opcao != 0);
 
     for (int i = 0; i < MAX_ALUNOS; i++) {
-        free(alunos[i]);
-    }
+    free(alunos[i]);
+}
 
     return 0;
 }
