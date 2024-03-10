@@ -7,5 +7,8 @@ Aluno *recebe_dados(void);
 /*Funçao que recebe um ponteiro para Aluno e imprime os daods */
 void imprime(Aluno * aluno);
 
-/* Funçao que matricula alunos */
+/*função que matricula N alunos */
+void matricula (Aluno * aluno);
 
+/*Função que libera memoria alocada */
+void libera_memoria (Aluno * aluno);

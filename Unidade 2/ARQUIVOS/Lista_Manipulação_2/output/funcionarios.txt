@@ -1,0 +1,8 @@
+Dados da pessoa 1 
+ Nome marcelo 
+ Salario 20000.00 
+ ID: 1
+Dados da pessoa 2 
+ Nome moises 
+ Salario 20000.00 
+ ID: 2

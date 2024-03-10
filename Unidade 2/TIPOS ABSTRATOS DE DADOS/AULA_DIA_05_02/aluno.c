@@ -20,10 +20,21 @@ Aluno * recebe_dados(void){
     scanf("%d", &estudante-> matricula );
     printf("informe o IRA: \n");
     scanf("%f", &estudante-> IRA );
-    return estudante;
 
+    return estudante;
 }
 
-void imprime()
+void imprimir_dados (Aluno * aluno) {
+    printf("Nome: %s\n", aluno->nome);
+    printf("Matricula: %d\n", aluno->matricula);
+    printf("IRA: %.2f\n", aluno->IRA);
+}
 
-// pegar de thyago depois
+void matricula (Aluno * aluno) {
+    printf("Matricula: %d\n", aluno->matricula);
+}
+
+void libera_memoria (Aluno * aluno) {
+    free(aluno);
+}
+

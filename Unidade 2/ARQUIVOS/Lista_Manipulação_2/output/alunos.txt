@@ -1,0 +1,8 @@
+Aluno 1  
+ Nome marcelo 
+ Notas: 2.00 8.00 6.00 8.00 5.80 
+ Media: 5.800000
+Aluno 2  
+ Nome moises 
+ Notas: 7.00 7.00 7.00 7.00 7.00 
+ Media: 7.000000

@@ -1,12 +1,14 @@
-#include "aluno.h"
+#include "aluno.c"
 #include <stdlib.h>
 
 int main(void){
     Aluno * aluno;
 
     aluno = recebe_dados();
-    imprime(aluno);
+    imprimir_dados(aluno);
+    matricula(aluno);
+    libera_memoria(aluno);
     free(aluno);
-
+    
     return 0;
 }
