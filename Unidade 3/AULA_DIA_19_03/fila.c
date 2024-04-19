@@ -21,8 +21,8 @@ Fila *CriaFila(int MAX_SIZE){
 }
 
 void DestruirFila(Fila **Q){
-    Fila *Qaux = Q;
-    free(Qaux->val);
+    Fila **Qaux = Q;
+    free((*Q)->val);
     free(Qaux);
     *Q = NULL;
 }
@@ -46,6 +46,7 @@ int InsereFila(Fila *Q, int elem){
         Q->qtde++;
         return 1; // sucesso na insercao
     }
+}
 
 int RemoveFila(Fila *Q){
     if (FilaVazia(Q)){
@@ -68,5 +69,4 @@ int ConsultaFila(Fila *Q, int *elem){
         *elem = Q->val[Q->ini];
         return 1; //sucesso ao consultar fila
     }
-}
 }

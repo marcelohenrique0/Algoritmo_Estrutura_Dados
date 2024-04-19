@@ -3,7 +3,7 @@
 
 typedef struct _fila Fila;
 
-Fila CriaFila(int MAX_SIZE);
+Fila* CriaFila(int MAX_SIZE);
 
 void DestruirFila(Fila **Q);
 
