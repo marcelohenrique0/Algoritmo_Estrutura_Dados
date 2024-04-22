@@ -32,3 +32,9 @@ argumento:
     int valor: valor a ser buscado
 */
 void busca_elemento_lista(Lista *lista, int valor);
+
+// função para retirar um elemento
+Lista *lista_retira(Lista *l, int v);
+
+// função para liberar elementos
+void lista_libera(Lista *l);

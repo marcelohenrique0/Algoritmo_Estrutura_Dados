@@ -55,3 +55,41 @@ void busca_elemento_lista(Lista *lista, int valor){
     }
     printf("Elemento não encontrado\n");
 }
+
+Lista *lista_retira(Lista *l, int v) {
+    Lista *ant = NULL;
+    Lista *p = l;
+
+    // Procura o elemento na lista
+    while (p != NULL && p->dado != v) {
+        ant = p;
+        p = p->prox;
+    }
+
+    // Se não encontrou o elemento, retorna a lista original
+    if (p == NULL) {
+        return l;
+    }
+
+    // Retira o elemento
+    if (ant == NULL) {
+        l = p->prox; // Se o elemento a ser retirado é o primeiro da lista
+    } else {
+        ant->prox = p->prox; // Se o elemento a ser retirado está no meio da lista
+    }
+
+    free(p); 
+    return l;
+}
+
+
+void lista_libera(Lista *l) {
+    Lista *p = l;
+
+    // Percorre a lista liberando a memória de cada nó
+    while (p != NULL) {
+        Lista *t = p->prox; // Salva o próximo nó
+        free(p);
+        p = t; // Move para o próximo nó
+    }
+}
